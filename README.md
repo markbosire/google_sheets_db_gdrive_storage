@@ -2,6 +2,37 @@
 
 This guide explains how to set up a Node.js backend using Google Sheets as a database and Google Drive for file storage.
 
+## Table of Contents
+
+1. [Prerequisites](#prerequisites)
+2. [Google Cloud Setup](#1-google-cloud-setup)
+   - [Create a Google Cloud Project](#create-a-google-cloud-project)
+   - [Create Service Account](#create-service-account)
+   - [Share Resources with Service Account](#share-resources-with-service-account)
+3. [Prepare Google Sheet](#2-prepare-google-sheet)
+   - [Sheet 1: "Todos"](#sheet-1-todos)
+   - [Sheet 2: "Users"](#sheet-2-users)
+4. [Node.js Server Setup](#3-nodejs-server-setup)
+5. [Environment Configuration](#4-environment-configuration)
+6. [Starting the Server](#5-starting-the-server)
+7. [API Endpoints](#6-api-endpoints)
+   - [Authentication Endpoints](#authentication-endpoints)
+   - [Default Admin User](#default-admin-user)
+   - [Todos](#todos)
+8. [User Roles and Permissions](#7-user-roles-and-permissions)
+   - [User Roles](#user-roles)
+   - [Permission System](#permission-system)
+9. [Testing with Postman](#8-testing-with-postman)
+   - [Testing Steps](#testing-steps)
+   - [Setting Variables in Postman](#setting-variables-in-postman)
+10. [Important Notes](#9-important-notes)
+    - [Security Considerations](#security-considerations)
+    - [User Isolation](#user-isolation)
+    - [File Management](#file-management)
+    - [Error Handling](#error-handling)
+
+---
+
 ## Prerequisites
 
 - Node.js (v14+)
